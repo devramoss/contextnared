@@ -7,19 +7,19 @@ function Form(){
         const errors = {};
 
         if(!values.name){
-            errors.name = "Este campo é necessário" ;
-        } else if(values.name > 15){
-            errors.name = "Deve possuir 15 caracteres ou menos" ;
+            errors.name = "Esse campo é necessário" ;
+        } else if(values.name.length > 30){
+            errors.name = "Deve possuir 30 caracteres ou menos" ;
         }
 
         if(!values.email){
-            errors.email = "Este campo é necessário" ;
+            errors.email = "Esse campo é necessário" ;
         } else if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)){
             errors.email = "Endereço de e-mail inválido" ;
         }
 
         if(!values.subject){
-            errors.subject = "Este campo é necessário"
+            errors.subject = "Esse campo é necessário";
         }
 
         return errors;
@@ -33,10 +33,9 @@ function Form(){
         },
         validate,
         onSubmit: (values) => {
-            console.log(JSON.stringify(values, null, 2))
+            console.log(JSON.stringify(values, null, 2));
         }
     });
-
 
     return(          
             <form className = "contact__form" onSubmit = {formik.handleSubmit}>
@@ -52,7 +51,7 @@ function Form(){
                     value = {formik.values.name}
                 />
 
-                {formik.errors.name ? <div>{formik.errors.name}</div> : null}
+                {formik.errors.name ? <div className = "error">{formik.errors.name}</div> : null}
 
                 <label htmlFor = "email">
                     E-mail
@@ -66,7 +65,7 @@ function Form(){
                     value = {formik.values.email}
                 />
 
-                {formik.errors.email ? <div>{formik.errors.email}</div> : null}   
+                {formik.errors.email ? <div className = "error">{formik.errors.email}</div> : null}   
 
                 <label htmlFor = "subject">
                     Assunto
@@ -81,7 +80,7 @@ function Form(){
 
                 </textarea>
 
-                {formik.errors.subject ? <div>{formik.errors.subject}</div> : null}
+                {formik.errors.subject ? <div className = "error">{formik.errors.subject}</div> : null}
 
                 <button type = "submit" id = "button__submit">
                     Enviar
