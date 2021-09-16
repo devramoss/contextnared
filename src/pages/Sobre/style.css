@@ -1,6 +1,17 @@
 .boxSobre{
     font-family: 'Roboto', sans-serif;
 }
+.about__us{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
 .title{
-    text-align: center;
+    margin: 10px;
+}
+
+p{
+    font-size: 16.5px;
 }
