@@ -48,10 +48,14 @@ function Form(){
                     className = "form__inputs" 
                     name = "name" 
                     onChange = {formik.handleChange}
+                    onBlur = {formik.handleBlur}
                     value = {formik.values.name}
                 />
 
-                {formik.errors.name ? <div className = "error">{formik.errors.name}</div> : null}
+                {
+                formik.touched.name && formik.errors.name ? 
+                (<div className = "error">{formik.errors.name}</div>) : null
+                }
 
                 <label htmlFor = "email">
                     E-mail
@@ -62,10 +66,14 @@ function Form(){
                     className = "form__inputs"
                     name = "email"
                     onChange = {formik.handleChange}
+                    onBlur = {formik.handleBlur}
                     value = {formik.values.email}
                 />
 
-                {formik.errors.email ? <div className = "error">{formik.errors.email}</div> : null}   
+                {
+                    formik.touched.email && formik.errors.email ? 
+                    (<div className = "error">{formik.errors.email}</div>) : null
+                }   
 
                 <label htmlFor = "subject">
                     Assunto
@@ -75,12 +83,16 @@ function Form(){
                     className = "text__area"
                     name = "subject"
                     onChange = {formik.handleChange}
+                    onBlur = {formik.handleBlur}
                     value = {formik.values.subject}
                 >
 
                 </textarea>
 
-                {formik.errors.subject ? <div className = "error">{formik.errors.subject}</div> : null}
+                {
+                    formik.touched.subject && formik.errors.subject ? 
+                    (<div className = "error">{formik.errors.subject}</div>) : null
+                }
 
                 <button type = "submit" id = "button__submit">
                     Enviar
