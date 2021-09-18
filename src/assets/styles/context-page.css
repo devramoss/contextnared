@@ -1,0 +1,27 @@
+main{
+    margin-top: 2.5%;
+    margin-left: 20.5%;
+    margin-right: 18%;
+}
+
+.social__context{
+    background-image: url(../images/edit-2-outline.svg);
+    background-repeat: no-repeat;
+    background-size: 1.56rem;
+    margin: 1.25rem 0;
+    padding: 0 2rem;
+    font-family: 'Arial', sans-serif;
+}
+
+.text{
+    width: 740px;
+    text-align: justify;
+    font-size: 18px ;
+    
+}
+
+.author{
+    text-align: start;
+    margin-left: 1.5rem;
+    font-weight: bold;
+}
