@@ -6,6 +6,7 @@ import SobrePage from './pages/Sobre';
 import TecnologiaPage from './pages/Tecnologia';
 import SociedadePage from './pages/Sociedade';
 import EducacaoPage from './pages/Educacao';
+import CulturaPage from './pages/Cultura';
 
 function MainRoutes(){
     return(
@@ -15,6 +16,7 @@ function MainRoutes(){
             <Route exact path = "/sobre" component = {SobrePage}/>
             <Route exact path = "/tecnologia" component = {TecnologiaPage}/>
             <Route exact path = "/educacao" component = {EducacaoPage}/>
+            <Route exact path = "/cultura" component = {CulturaPage}/>
             <Route component = {Page_404}/>
         </Switch>
     )

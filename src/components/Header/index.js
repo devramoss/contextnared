@@ -16,7 +16,7 @@ function Header(){
                         <span id = "sub-menu_titulo">Contextos</span>
                         <ul className = "sub_menu">
                             <li className = "menu-dropdown_item">
-                                <Link to = "#" className = "menu-dropdown_link">
+                                <Link to = "/cultura" className = "menu-dropdown_link">
                                     Cultura
                                 </Link>
                             </li>
