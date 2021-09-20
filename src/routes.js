@@ -8,6 +8,7 @@ import SociedadePage from './pages/Sociedade';
 import EducacaoPage from './pages/Educacao';
 import CulturaPage from './pages/Cultura';
 import GeralPage from './pages/Geral';
+import SaudePage from './pages/Saude';
 
 function MainRoutes(){
     return(
@@ -19,6 +20,7 @@ function MainRoutes(){
             <Route exact path = "/educacao" component = {EducacaoPage}/>
             <Route exact path = "/cultura" component = {CulturaPage}/>
             <Route exact path = "/geral" component = {GeralPage}/>
+            <Route exact path = "/saude" component = {SaudePage}/>
             <Route component = {Page_404}/>
         </Switch>
     )

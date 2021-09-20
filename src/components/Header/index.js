@@ -26,12 +26,12 @@ function Header(){
                                 </Link>
                             </li>
                             <li className = "menu-dropdown_item">
-                                <Link to = "#" className = "menu-dropdown_link">
+                                <Link to = "/geral" className = "menu-dropdown_link">
                                     Geral
                                 </Link>
                             </li>
                             <li className = "menu-dropdown_item">
-                                <Link to = "#" className = "menu-dropdown_link">
+                                <Link to = "/saude" className = "menu-dropdown_link">
                                     Saúde
                                 </Link>
                             </li>
@@ -41,7 +41,7 @@ function Header(){
                                 </Link>
                             </li>
                             <li className = "menu-dropdown_item">
-                                <Link to = "#" className = "menu-dropdown_link">
+                                <Link to = "/tecnologia" className = "menu-dropdown_link">
                                     Tecnologia
                                 </Link>
                             </li>
