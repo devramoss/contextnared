@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import getSocialContexts from '../../services/dato-cms/social-contexts';
 import Header from '../../components/Header';
-import '../../assets/styles/context-page.css';
 
 function SociedadePage(){
     const [socialContexts, setSocialContexts] = useState([]);
@@ -20,16 +19,14 @@ function SociedadePage(){
                 {
                     socialContexts.map((currentItem) => {
                         return(
-                            <article key = {currentItem.id} className = "social__context">
+                            <article key = {currentItem.id} className = "context">
                                 <p className = "text"> 
                                     {currentItem.texto}
                                 </p>
                                 <p className = "author">
                                     {currentItem.autor}
                                 </p>
-                            </article>
-                            
-                            
+                            </article> 
                         )
                     })
                 }

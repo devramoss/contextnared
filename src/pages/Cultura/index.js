@@ -19,7 +19,7 @@ function CulturaPage(){
                 {
                     cultureContext.map((currentItem) => {
                         return(
-                            <article key = {currentItem.id} className = "social__context">
+                            <article key = {currentItem.id} className = "context">
                                 <p className = "text">
                                     {currentItem.texto}
                                 </p>
