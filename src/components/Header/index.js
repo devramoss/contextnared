@@ -1,12 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../Header/style.css';
+import logo from '../../assets/images/logo.png';
 
 function Header(){
    return(
-    <header>
+        <header>
             <nav>
                 <ul className="menu-dropdown">
+                    <li>
+                        <img src = {logo} alt = "Logo do site"/>
+                    </li>
                     <li className = "menu-dropdown_item">
                         <Link to = "/" className = "menu-dropdown_link">
                             Home
