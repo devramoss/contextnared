@@ -1,3 +1,9 @@
+*{
+    --line__height: 1.25rem;
+    --font__size: 1rem;
+    --author__responsive__left__margin:
+}
+
 main{
     margin-top: 2.5%;
     margin-left: 20.5%;
@@ -5,7 +11,7 @@ main{
 }
 
 .context{
-    background-image: url(../images/edit-2-outline.svg);
+    background-image: url(../images/pencil.svg);
     background-repeat: no-repeat;
     background-size: 1.56rem;
     margin: 1.25rem 0;
@@ -14,14 +20,106 @@ main{
 }
 
 .text{
-    width: 740px;
+    width: 46.25rem;
     text-align: justify;
-    font-size: 18px ;
-    
+    font-size: 1.13rem ;
 }
 
 .author{
     text-align: start;
     margin-left: 1.5rem;
     font-weight: bold;
+}
+
+@media screen and (min-width:320px) and (max-width: 350px){
+    main{
+        margin-left: 5%;
+        margin-right: 8%;
+    }
+   .text{
+        width: 16rem;
+        font-size: var(--font__size);
+        line-height: var(--line__height);
+   }
+   .author{
+       margin-top: .5rem;
+       margin-left: var(--author__responsive__left__margin);
+   }
+   
+}
+
+@media screen and (min-width: 350px) and (max-width: 380px){
+    main{
+        margin-left: 2%;
+        margin-right: 6%;
+    }
+   .text{
+        width: 18.5rem;
+        font-size: var(--font__size);
+        line-height: var(--line__height);
+   }
+   .author{
+       margin-top: .5rem;
+       margin-left: var(--author__responsive__left__margin);
+   }
+}
+
+@media screen and (min-width: 380px) and (max-width: 480px){
+    main{
+        margin-left: 3.5%;
+        margin-right: 0;
+    }
+   .text{
+        width: 20rem;
+        font-size: var(--font__size);
+        line-height: var(--line__height);
+   }
+}
+
+@media screen and (min-width: 480px) and (max-width: 600px){
+    main{
+        margin-left: 3.5%;
+        margin-right: 0;
+    }
+   .text{
+        width: 26rem;
+        font-size: var(--font__size);
+        line-height: var(--line__height);
+   }
+}
+
+@media screen and (min-width: 600px) and (max-width: 740px){
+    main{
+        margin-left: 2%;
+        margin-right: 0;
+    }
+   .text{
+        width: 33.8rem;
+        font-size: var(--font__size);
+        line-height: var(--line__height);
+   }
+}
+
+@media screen and (min-width: 740px) and (max-width: 940px){
+    main{
+        margin-left: 2%;
+        margin-right: var(--author__responsive__left__margin);
+    }
+   .text{
+        width: 42rem;
+        font-size: var(--font__size);
+        line-height: var(--line__height);
+   }
+}
+
+@media screen and (min-width: 940px) and (max-width: 1024px){
+    main{
+        margin-left: 6%;
+        margin-right: 0;
+    }
+   .text{
+        width: 50rem;
+        font-size: var(--font__size);
+        line-height: var(--line__height);
+   }
 }
