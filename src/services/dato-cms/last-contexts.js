@@ -1,5 +1,4 @@
 const API_URL = 'https://graphql.datocms.com/';
-const API_TOKEN = '610cc2ac61382dd6da80be37f8257a';
 const recentPostData = new Date();
 
 const getRecentPosts = () => {
@@ -8,7 +7,7 @@ const getRecentPosts = () => {
             headers : {
                 'Content-Type' : 'application/json',
                 'Accept' : 'application/json',
-                'Authorization' : `Bearer ${API_TOKEN}`
+                'Authorization' : `Bearer ${process.env.REACT_APP_DATO_TOKEN}`
             },
             body : JSON.stringify({
                 query : `{
@@ -25,4 +24,4 @@ const getRecentPosts = () => {
         })
 }
 
-export default getRecentPosts
+export default getRecentPosts;

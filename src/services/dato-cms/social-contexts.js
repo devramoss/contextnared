@@ -1,5 +1,4 @@
 const API_URL = 'https://graphql.datocms.com/';
-const API_TOKEN = '610cc2ac61382dd6da80be37f8257a';
 
 const getSocialContexts = () => {
     return fetch(API_URL, {
@@ -7,7 +6,7 @@ const getSocialContexts = () => {
                 headers: {
                     'Content-Type' : 'application/json',
                     'Accept' : 'application/json',
-                    'Authorization' : `Bearer ${API_TOKEN}`,
+                    'Authorization' : `Bearer ${process.env.REACT_APP_DATO_TOKEN}`,
                 },
                 body : JSON.stringify({
                     query : `{
@@ -24,4 +23,4 @@ const getSocialContexts = () => {
             })
 }
 
-export default getSocialContexts
+export default getSocialContexts;
