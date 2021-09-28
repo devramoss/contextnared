@@ -1,24 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../Header/style.css';
 import logo from '../../assets/images/logo.png';
+import menu__mobile from '../../assets/images/menu-mobile.svg'
 
 function Header(){
+   const [sidebar, setSidebar] = useState(false)
+   const [submenu, setSubMenu] = useState(false)
+
+   const showSideBar = () => {
+       setSidebar(!sidebar)
+   }
+
+   const showSubMenu = () => {
+        setSubMenu(!submenu)
+   }
+   
    return(
         <header>
             <nav>
-                <ul className="menu-dropdown">
+                <Link to = "#" onClick = {showSideBar}>
+                    <img src = {menu__mobile} id = "menu__mobile" alt = "Ícone de menu mobile"/>
+                </Link>
+                
+                <ul
+                className="menu-dropdown" 
+                id={sidebar ? 'menu_mobile_active': 'menu_mobile'}
+                >
                     <li>
                         <img src = {logo} alt = "Logo do site"/>
                     </li>
-                    <li className = "menu-dropdown_item">
-                        <Link to = "/" className = "menu-dropdown_link">
+                    <li className="menu-dropdown_item">
+                        <Link to="/" className="menu-dropdown_link">
                             Home
                         </Link>
                     </li>
-                    <li className = "menu-dropdown_item">
-                        <span id = "sub-menu_titulo">Contextos</span>
-                        <ul className = "sub_menu">
+                    <li className="menu-dropdown_item">
+                        <span id="sub-menu_titulo">
+                            <Link to="#" onClick={showSubMenu}id="sub-menu_link">
+                                Contextos
+                            </Link>
+                        </span>
+                        <ul 
+                        className="sub_menu" 
+                        id={submenu?'sub_menu_active': 'sub_menu'}
+                        >
                             <li className = "menu-dropdown_item">
                                 <Link to = "/cultura" className = "menu-dropdown_link">
                                     Cultura
