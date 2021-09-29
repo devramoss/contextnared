@@ -74,7 +74,7 @@ li img {
     margin-left: .8rem;
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (min-width: 320px) and (max-width: 1024px){
     li img{
         display: none;
     }
@@ -84,6 +84,12 @@ li img {
         margin-right: 0;
         border-bottom-left-radius: var(--border__radius);
         border-bottom-right-radius: var(--border__radius);
+    }
+
+    .menu-dropdown_item, #sub-menu_link{
+        font-size: 20px;
+        line-height: 1.5rem;
+        padding: 2px 0;
     }
     #menu__mobile{
         display: block;
@@ -98,6 +104,7 @@ li img {
 
     #menu_mobile_active{
         display: block;
+        height: 90px;
     }
 
     #sub_menu{
@@ -106,6 +113,7 @@ li img {
 
     #sub_menu_active{
         width: 96vw;
+        height: 170px;
         display: block;
         margin-left: 0;
         visibility: visible;
