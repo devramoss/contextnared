@@ -5,6 +5,10 @@
     --border__radius: 8px;
     box-sizing: border-box;
 }
+.home-icon{
+    width: 30px;
+    margin-right: 50px;
+}
 
 .menu-dropdown{
     background: var(--background__color);
@@ -45,7 +49,7 @@
 }
 
 .menu-dropdown_link{
-    padding: 15px;
+    padding: 10px;
     text-decoration: none;
     text-align: center;
     color: #f7f7ff;
@@ -58,10 +62,10 @@
     transition: all 0.2s;
 }
 
-li img {
+#logo {
     width: 82px;
     height: 82px;
-    margin-right: 700px;
+    margin-right: 780px;
 }
 
 #menu__mobile{
@@ -75,15 +79,24 @@ li img {
 }
 
 @media screen and (min-width: 320px) and (max-width: 1024px){
-    li img{
+    .home-icon{
+        margin-left: 20px;
+    }
+
+    #sub-menu_titulo{
+        margin-left: -28.5px;
+    }
+    #logo{
         display: none;
     }
     .menu-dropdown{
         width: 96vw;
+        padding-left: 3px;
         margin-left: .6rem;
         margin-right: 0;
         border-bottom-left-radius: var(--border__radius);
         border-bottom-right-radius: var(--border__radius);
+        justify-content: center;
     }
 
     .menu-dropdown_item, #sub-menu_link{
@@ -103,7 +116,7 @@ li img {
     }
 
     #menu_mobile_active{
-        display: block;
+        
         height: 90px;
     }
 
@@ -112,17 +125,17 @@ li img {
     }
 
     #sub_menu_active{
-        width: 96vw;
+        width: 9.5rem;
         height: 170px;
         display: block;
-        margin-left: 0;
+        margin-left: -45px;
         visibility: visible;
         
     }
 
     #sub_menu_active li{
         padding: 1.5px;
-        text-align: left;
+        text-align: center;
     }
 
     #sub_menu_active .menu-dropdown_link{

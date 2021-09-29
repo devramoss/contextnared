@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../Header/style.css';
 import logo from '../../assets/images/logo.png';
 import menu__mobile from '../../assets/images/menu-mobile.svg'
+import home__icon from '../../assets/images/home-icon.svg';
 
 function Header(){
    const [sidebar, setSidebar] = useState(false)
@@ -28,11 +29,11 @@ function Header(){
                 id={sidebar ? 'menu_mobile_active': 'menu_mobile'}
                 >
                     <li>
-                        <img src = {logo} alt = "Logo do site"/>
+                        <img src = {logo} alt = "Logo do site" id = "logo"/>
                     </li>
-                    <li className="menu-dropdown_item">
+                    <li>
                         <Link to="/" className="menu-dropdown_link">
-                            Home
+                            <img src ={home__icon} className="home-icon"/>
                         </Link>
                     </li>
                     <li className="menu-dropdown_item">
