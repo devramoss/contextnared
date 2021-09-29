@@ -41,7 +41,7 @@ function Form(){
         },
         validate,
         onSubmit: (values) => {
-            fetch('http://localhost:5000/enviarformulario', {
+            fetch(`${process.env.REACT_APP_API_URL}/enviarformulario`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
