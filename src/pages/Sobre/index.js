@@ -1,5 +1,4 @@
 import React from 'react';
-import font from '../../services/fonts.css';
 import Form from './Component/Form';
 import Header from '../../components/Header';
 import '../Sobre/style.css';
@@ -10,9 +9,8 @@ function SobrePage(){
             <Header/>
             <main class = "about__us">
                 <h1 className = "title">Sobre</h1>
-                <p>
-                    O ContextNaRed nasceu com o intuito de ajudar outros estudantes.
-                    Deseja bater um papo ? Entre em contato conosco pelo formulário pelo formulário abaixo.
+                <p id = "about__us__text">
+                    O ContextNaRed nasceu com o intuito de ajudar estudantes no desenvolvimento de redações modelo ENEM, por intermédio da disponibilização de contextos coringas de fácil memorização. Deseja bater um papo? Entre em contato conosco pelo formulário abaixo.
                 </p>
                 <h2 className = "title">Contato</h2>
                 <Form/>

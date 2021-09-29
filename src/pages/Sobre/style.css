@@ -10,8 +10,52 @@
 
 .title{
     margin: 10px;
+    text-shadow: 2px 1.2px 2.5px violet;
 }
 
-p{
+#about__us__text{
     font-size: 16.5px;
+    text-align: justify;
+}
+
+#modal-title{
+    text-align: center;
+    color: #8a2be2;
+    font-family: 'Roboto', sans-serif;
+}
+#send-email{
+    width: 450px;
+    height: 450px;
+    margin-left: 100px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 600px){
+    #about__us__text{
+        width: 278px;
+        word-break: break-word;
+    }
+    #modal-title{
+        font-size: 1.4rem;
+    }
+
+    #send-email{
+        width: 250px;
+        height: 250px;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width:1024px){
+     #about__us__text{
+        width: 500px;
+    }
+    #modal-title{
+        font-size: 1.4rem;
+    }
+
+    #send-email{
+        width: 250px;
+        height: 250px;
+        text-align: center;
+    }
 }

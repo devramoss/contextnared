@@ -30,6 +30,7 @@ label, button{
    border: .5px solid var(--border__color);
    font-family: 'Arial', sans-serif;
    font-size: var(--font__size__input);
+   margin-bottom: .6rem;
 }
 
 #button__submit{
@@ -51,4 +52,16 @@ label, button{
 .error{
     margin: 2px 0 10px;
     color: rgb(240, 3, 3);
+}
+
+@media screen and (min-width: 320px) and (max-width: 350px){
+    .text__area{
+        width: 291px;
+        height: 400px;
+    }
+
+    .contact__form{
+        margin-left: 0%;
+        margin-right: 2%;
+    }
 }

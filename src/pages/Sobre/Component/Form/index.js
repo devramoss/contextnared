@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import './style.css';
+import send_email_image from '../../../../assets/images/send-email.jpg'
+import Modal from '../../../../components/Modal/Modal';
 
 function Form(){
+    const [showModal, setShowModal] = useState(null)
+
+    const openModal = () =>{
+        setShowModal(true)
+    }
+
     const validate = (values) =>{
         const errors = {};
 
@@ -21,7 +29,7 @@ function Form(){
         if(!values.subject){
             errors.subject = "Esse campo é necessário";
         }
-
+        
         return errors;
     }
 
@@ -33,12 +41,31 @@ function Form(){
         },
         validate,
         onSubmit: (values) => {
-            console.log(JSON.stringify(values, null, 2));
+            fetch('http://localhost:5000/enviarformulario', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                },
+                body: JSON.stringify({
+                    nome: values.name,
+                    email: values.email,
+                    assunto: values.subject
+                })
+            })
+            .then(openModal())
         }
     });
 
     return(          
-            <form className = "contact__form" onSubmit = {formik.handleSubmit}>
+            <form className="contact__form" onSubmit={formik.handleSubmit}> 
+                <Modal 
+                    isOpen={Boolean(showModal)} 
+                    onClickClose={()=>{setShowModal(null)}}
+                >
+                    <h1 id="modal-title">Agradecemos por entrar em contato.</h1>
+                    <img src={send_email_image} alt="E-mail enviado" id="send-email"/>
+                </Modal>
                 <label htmlFor = "name">
                     Nome
                 </label>
@@ -94,7 +121,11 @@ function Form(){
                     (<div className = "error">{formik.errors.subject}</div>) : null
                 }
 
-                <button type = "submit" id = "button__submit">
+                <button 
+                    type = "submit" 
+                    disabled = {!formik.isValid || formik.isSubmitting === true}
+                    id = "button__submit"
+                >
                     Enviar
                 </button>
             </form>
