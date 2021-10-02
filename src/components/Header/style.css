@@ -36,6 +36,7 @@
     border-bottom-right-radius: var(--border__radius);
     position: absolute;
     visibility: hidden;
+    z-index:+1;
 }
 
 .menu-dropdown_item:hover .sub_menu{
@@ -46,6 +47,7 @@
     padding: 10px;
     text-align: center;
     width: 150px;
+    
 }
 
 .menu-dropdown_link{
