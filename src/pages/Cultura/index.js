@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import Header from "../../components/Header";
+import Footer from '../../components/Footer/';
 import getCultureContexts from "../../services/dato-cms/culture-contexts";
 
 function CulturaPage(){
@@ -31,6 +32,7 @@ function CulturaPage(){
                     })
                 }
             </main>
+            <Footer/>
         </div>
     )
 }

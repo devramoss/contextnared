@@ -3,6 +3,7 @@ import { useFormik } from 'formik';
 import './style.css';
 import send_email_image from '../../../../assets/images/send-email.jpg'
 import Modal from '../../../../components/Modal/Modal';
+import Footer from '../../../../components/Footer';
 
 function Form(){
     const [showModal, setShowModal] = useState(null)
@@ -58,7 +59,8 @@ function Form(){
     });
 
     return(          
-            <form className="contact__form" onSubmit={formik.handleSubmit}> 
+           <div>
+                <form className="contact__form" onSubmit={formik.handleSubmit}> 
                 <Modal 
                     isOpen={Boolean(showModal)} 
                     onClickClose={()=>{setShowModal(null)}}
@@ -129,6 +131,8 @@ function Form(){
                     Enviar
                 </button>
             </form>
+            <Footer/>
+           </div>
     ) 
 }
 

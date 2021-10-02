@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import getSocialContexts from '../../services/dato-cms/social-contexts';
 import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 function SociedadePage(){
     const [socialContexts, setSocialContexts] = useState([]);
@@ -31,6 +32,7 @@ function SociedadePage(){
                     })
                 }
             </main>
+            <Footer/>
         </div>
     )
 }

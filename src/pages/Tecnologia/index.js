@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import getTechnologyContexts from '../../services/dato-cms/technology-contexts';
 import Header from "../../components/Header";
+import Footer from '../../components/Footer/';
 import '../../assets/styles/context-page.css';
 
 function TecnologiaPage(){
@@ -31,6 +32,7 @@ function TecnologiaPage(){
                     })
                 }
             </main>
+            <Footer/>
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import getGeneralContexts from "../../services/dato-cms/general-contexts";
 import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 function GeralPage(){
     const [generalContexts, setGeneralContexts] = useState([]);
@@ -31,6 +32,7 @@ function GeralPage(){
                     })
                 }
             </main>
+            <Footer/>
         </div>
     )
 }
