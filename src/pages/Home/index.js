@@ -18,7 +18,7 @@ function HomePage(){
     }, [])
 
     return(
-        <div>
+        <div className="general_container">
             <Header/>
             <section className="content_container">
                 <p id="call__text">Aqui você encontra contextos coringa para usar na redação.</p>

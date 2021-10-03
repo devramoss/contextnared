@@ -14,7 +14,7 @@ function TecnologiaPage(){
         })
     }, [])
     return(
-        <div>
+        <div className="general_container">
             <Header/>
             <main>
                 {

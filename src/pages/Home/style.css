@@ -4,6 +4,10 @@ section{
     margin-right: 18%;
 }
 
+.general_container{
+    margin-bottom: -85vh;
+}
+
 .content_container{
     width: 640px;
 }

@@ -4,6 +4,10 @@
     --author__responsive__left__margin:
 }
 
+.general_container{
+    margin-bottom: -74.98vh;
+}
+
 main{
     margin-top: 2.5%;
     margin-left: 20.5%;

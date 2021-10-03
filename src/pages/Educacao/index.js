@@ -14,7 +14,7 @@ function EducacaoPage(){
     }, [])
 
     return(
-        <div>
+        <div className="general_container">
             <Header/>
             <main>
                 {

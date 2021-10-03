@@ -16,7 +16,7 @@ function SaudePage(){
     return(
         <div>
             <Header/>
-            <main>
+            <main className="general_container">
                 {
                     healthContexts.map((currentItem)=>{
                         return(
