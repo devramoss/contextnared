@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useFormik } from 'formik';
+import axios from 'axios';
 import './style.css';
 import send_email_image from '../../../../assets/images/send-email.jpg'
 import Modal from '../../../../components/Modal/Modal';
@@ -42,19 +43,29 @@ function Form(){
         },
         validate,
         onSubmit: (values) => {
-            fetch(`${process.env.REACT_APP_API_URL}enviarformulario`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json',
-                },
-                body: JSON.stringify({
-                    nome: values.name,
-                    email: values.email,
-                    assunto: values.subject
-                })
+            const formData = JSON.stringify({
+                nome: values.name,
+                email: values.email,
+                assunto: values.subject
             })
-            .then(openModal())
+            axios.post(
+                    `${process.env.REACT_APP_API_URL}/enviarformulario`, 
+                    formData, 
+                    {
+                        headers: {
+                            'Content-Type': 'application/json',
+                        }
+                    }
+            )
+            .then(
+                (response)=>{
+                    openModal();
+                    console.log(response);
+                }
+             )
+            .catch(function (error){
+                console.log(error);
+              });
         }
     });
 
