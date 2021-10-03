@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useFormik } from 'formik';
-import axios from 'axios';
+import api from '../../../../services/api';
 import './style.css';
-import send_email_image from '../../../../assets/images/send-email.jpg'
+import send_email_image from '../../../../assets/images/send-email.jpg';
 import Modal from '../../../../components/Modal/Modal';
 import Footer from '../../../../components/Footer';
 
@@ -43,29 +43,17 @@ function Form(){
         },
         validate,
         onSubmit: (values) => {
-            const formData = JSON.stringify({
+            api.post("enviarformulario", {
                 nome: values.name,
                 email: values.email,
                 assunto: values.subject
             })
-            axios.post(
-                    `${process.env.REACT_APP_API_URL}enviarformulario`, 
-                    formData, 
-                    {
-                        headers: {
-                            'Content-Type': 'application/json',
-                        }
-                    }
-            )
-            .then(
-                (response)=>{
-                    openModal();
-                    console.log(response);
-                }
-             )
-            .catch(function (error){
+            .then((response)=>{
+                console.log(response);
+            })
+            .catch((error)=>{
                 console.log(error);
-              });
+            })
         }
     });
 
