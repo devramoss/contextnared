@@ -42,7 +42,7 @@ function Form(){
         },
         validate,
         onSubmit: (values) => {
-            fetch(`${process.env.REACT_APP_API_URL}/enviarformulario`, {
+            fetch(`${process.env.REACT_APP_API_URL}enviarformulario`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
