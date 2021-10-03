@@ -49,7 +49,7 @@ function Form(){
                 assunto: values.subject
             })
             axios.post(
-                    `${process.env.REACT_APP_API_URL}/enviarformulario`, 
+                    `${process.env.REACT_APP_API_URL}enviarformulario`, 
                     formData, 
                     {
                         headers: {
