@@ -43,7 +43,7 @@ function Form(){
         },
         validate,
         onSubmit: (values) => {
-            api.post('/', {
+            api.post('/enviarformulario', {
                 nome: values.name,
                 email: values.email,
                 assunto: values.subject
