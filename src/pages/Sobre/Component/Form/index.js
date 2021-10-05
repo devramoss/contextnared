@@ -10,7 +10,7 @@ function Form(){
     const [showModal, setShowModal] = useState(null)
 
     const openModal = () =>{
-        setShowModal(true)
+        setShowModal(!showModal)
     }
 
     const validate = (values) =>{
@@ -49,6 +49,7 @@ function Form(){
                 assunto: values.subject
             })
             .then((response)=>{
+                openModal()
                 console.log(response);
             })
             .catch((error)=>{
